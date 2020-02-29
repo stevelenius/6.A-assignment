@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Exercise 6.A vue.js</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+</head>
+
+<body>
+  <div id="myLlamaFacts">
+    <h1>The Llama List</h1>
+<!-- Change h2 subhead to agree with number of facts presented: nine or ten. -->
+    <h2 v-if="showF7===false">Nine Facts About Llamas</h2>
+    <h2 v-else>Ten Facts About Llamas</h2>
+<!-- had to use "span v-html" instead of double curly brackets on some facts below
+in order to have HTML entities (quote marks and apostrophes) appear properly. -->
+    <ol>
+      <li>
+        <span v-html="fact1"></span>
+      </li>
+      <li>
+        <span v-html="fact2"></span>
+      </li>
+      <li>
+        <span v-html="fact3"></span>
+      </li>
+      <li>
+        {{fact4}}
+      </li>
+      <li>
+        <span v-html="fact5"></span>
+      </li>
+      <li>
+        {{fact6}}
+      </li>
+      <li v-if="showF7===true">
+        <span v-html="fact7"></span>
+      </li>
+      <li>
+        {{fact8}}
+      </li>
+      <li>
+        {{fact9}}
+      </li>
+      <li>
+        {{fact10}}
+      </li>
+    </ol>
+  </div>
+
+<!-- had to move the following two lines out of head and into body. 
+Else vue loaded before DOM and bindings did not show. -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="6.A-assignment-vue.js"></script>
+  </body>
+</html>
