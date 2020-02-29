@@ -3,7 +3,7 @@
 // Kicking the tires on Vue.js
 // 
 
-new Vue({
+var myLlamaFacts = new Vue({
   el: "#myLlamaFacts",
   data: {
 // We are using HTML entities for quotes and apostrophes in some of the facts below.
